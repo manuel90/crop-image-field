@@ -32,7 +32,7 @@ class CropImageFieldServiceProvider extends ServiceProvider
     public function register()
     {
         //
-        Voyager::addFormField(CropImageFormField::class);
+        //Voyager::addFormField(CropImageFormField::class);
 
         $publishablePath = dirname(__DIR__).'/publishable';
 
