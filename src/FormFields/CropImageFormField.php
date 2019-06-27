@@ -1,6 +1,6 @@
 <?php
 
-namespace MdsDigital\CropImageField\FormFields;
+namespace Manuel90\CropImageField\FormFields;
 
 use TCG\Voyager\FormFields\AbstractHandler;
 

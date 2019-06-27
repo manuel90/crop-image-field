@@ -1,2 +1,2 @@
-# crop-image-field
+# Crop Image Field
 Voyager Form Field Crop Image

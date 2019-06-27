@@ -1,10 +1,10 @@
 <?php
 
-namespace MdsDigital\CropImageField;
+namespace Manuel90\CropImageField;
 
 use Illuminate\Support\ServiceProvider;
 
-use MdsDigital\CropImageField\FormFields\CropImageFormField;
+use Manuel90\CropImageField\FormFields\CropImageFormField;
 
 class WelcomeServiceProvider extends ServiceProvider
 {
@@ -33,7 +33,7 @@ class WelcomeServiceProvider extends ServiceProvider
         Voyager::addFormField(CropImageFormField::class);
 
         $publishablePath = dirname(__DIR__).'/publishable';
-        
+
         $this->publishes(["{$publishablePath}/assets/" => public_path('assets')]);
     }
 }
