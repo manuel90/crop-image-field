@@ -7,8 +7,9 @@
             "email": "mlopez@mdsdigital.com"
         }
     ],
-    "require": {
-        "tcg/voyager": "^1.1"
+    "require": {},
+    "require-dev": {
+        "tcg/voyager": "~1.1"
     },
     "autoload": {
         "psr-4": {
