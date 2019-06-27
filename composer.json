@@ -1,6 +1,6 @@
 {
     "name": "manuel90/crop-image-field",
-    "type": "metapackage",
+    "description": "New voyager form field to cut image when uploading",
     "authors": [
         {
             "name": "Manuel",
