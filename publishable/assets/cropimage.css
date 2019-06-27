@@ -1,0 +1,24 @@
+
+.container-crop-image-field {
+
+}
+.container-crop-image-field .formfield-crop-container {
+    display: block;
+    margin: 0 auto;
+}
+.container-crop-image-field .formfield-crop-container.nocropping {
+    height: auto !important;
+}
+.container-crop-image-field .formfield-crop-container.nocropping img {
+    display: block;
+    max-width: 100%;
+}
+.container-crop-image-field .formfield-crop-container .cropper-bg {
+    background-image: none;
+    background-color: #000;
+}
+.container-crop-image-field .formfield-crop-container .cropper-canvas {
+    background-position: left top;
+    background-repeat: repeat;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC');
+}

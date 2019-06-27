@@ -1,0 +1,13 @@
+{
+    "name": "mdsdigital/crop-image-field",
+    "type": "metapackage",
+    "authors": [
+        {
+            "name": "Manuel",
+            "email": "mlopez@mdsdigital.com"
+        }
+    ],
+    "require": {
+        "tcg/voyager": "^1.1"
+    }
+}
