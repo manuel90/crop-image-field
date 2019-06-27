@@ -3,7 +3,7 @@
 <h5><i>{{ $row->details->image_description }}</i></h5>
 @endif
 @if(isset($item->{$row->field}))
-    <img src="@if( !filter_var($item->{$row->field}, FILTER_VALIDATE_URL)){{ Voyager::image( $item->{$row->field} ) }}@else{{ $item->{$row->field} }}@endif"
+    <img src="@if( !filter_var($item->{$row->field}, FILTER_VALIDATE_URL)){{ \TCG\Voyager\Facades\Voyager::image( $item->{$row->field} ) }}@else{{ $item->{$row->field} }}@endif"
          style="max-width:200px; height:auto; clear:both; display:block; padding:2px; border:1px solid #ddd; margin-bottom:10px;">
 @endif
 <div class="container-crop-image-field">
