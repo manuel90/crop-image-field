@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 use Manuel90\CropImageField\FormFields\CropImageFormField;
 
-class WelcomeServiceProvider extends ServiceProvider
+class CropImageFieldServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.

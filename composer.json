@@ -9,5 +9,17 @@
     ],
     "require": {
         "tcg/voyager": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Manuel90\\CropImageField\\": "src/"
+        }
+    },
+    "extra": {
+    	"laravel": {
+    		"providers": [
+    			"Manuel90\\CropImageField\\CropImageFieldServiceProvider"
+    		]
+    	}
     }
 }
