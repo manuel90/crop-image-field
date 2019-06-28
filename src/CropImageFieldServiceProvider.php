@@ -6,7 +6,8 @@ use Illuminate\Support\ServiceProvider;
 
 use Manuel90\CropImageField\FormFields\CropImageFormField;
 
-use TCG\Voyager\Facades\Voyager;
+//use TCG\Voyager\Facades\Voyager;
+use Voyager;
 
 class CropImageFieldServiceProvider extends ServiceProvider
 {
@@ -32,7 +33,9 @@ class CropImageFieldServiceProvider extends ServiceProvider
     public function register()
     {
         //
-        //Voyager::addFormField(CropImageFormField::class);
+        if( class_exists('Voyager') ) {
+            Voyager::addFormField(CropImageFormField::class);
+        }
 
         $publishablePath = dirname(__DIR__).'/publishable';
 
