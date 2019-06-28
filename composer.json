@@ -16,7 +16,7 @@
         }
     },
     "extra": {
-    	"laravel": {
+    	"hook": {
     		"providers": [
     			"Manuel90\\CropImageField\\CropImageFieldServiceProvider"
     		]
