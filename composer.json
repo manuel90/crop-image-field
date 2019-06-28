@@ -19,10 +19,7 @@
     	"laravel": {
     		"providers": [
     			"Manuel90\\CropImageField\\CropImageFieldServiceProvider"
-            ],
-            "aliases": {
-                "Voyager": "TCG\\Voyager\\Facades\\Voyager"
-            }
+            ]
     	}
     }
 }
