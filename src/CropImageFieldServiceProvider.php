@@ -6,8 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 use Manuel90\CropImageField\FormFields\CropImageFormField;
 
-//use TCG\Voyager\Facades\Voyager;
-use Voyager;
+use TCG\Voyager\Facades\Voyager;
 
 class CropImageFieldServiceProvider extends ServiceProvider
 {
@@ -19,7 +18,7 @@ class CropImageFieldServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-        //include __DIR__ . '/../routes/myroutes.php';
+        include __DIR__ . '/../routes/cropimage.php';
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'cropimage');
 
         $this->loadTranslationsFrom(realpath(__DIR__.'/../publishable/lang'), 'cropimage');
