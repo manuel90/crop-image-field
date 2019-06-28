@@ -21,7 +21,7 @@ class CropImageFieldServiceProvider extends ServiceProvider
         include __DIR__ . '/../routes/cropimage.php';
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'cropimage');
 
-        $this->loadTranslationsFrom(realpath(__DIR__.'/../publishable/lang'), 'cropimage');
+        $this->loadTranslationsFrom(__DIR__.'/../publishable/lang', 'cropimage');
     }
 
     /**

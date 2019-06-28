@@ -28,7 +28,7 @@ class CropImageFormField extends AbstractHandler
         }
 
 
-        return view('cropimagecropimage::index', [
+        return view('cropimage::index', [
             'row' => $row,
             'options' => $options,
             'dataType' => $dataType,
