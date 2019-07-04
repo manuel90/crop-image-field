@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 use Manuel90\CropImageField\FormFields\CropImageFormField;
 
-use TCG\Voyager\Facade\Voyager;
+use TCG\Voyager\Facades\Voyager;
 
 class CropImageFieldServiceProvider extends ServiceProvider
 {
