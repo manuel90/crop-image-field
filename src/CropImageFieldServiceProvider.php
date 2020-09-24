@@ -17,11 +17,14 @@ class CropImageFieldServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-        include __DIR__ . '/../routes/cropimage.php';
+        $this->loadRoutesFrom(__DIR__ . '/../routes/cropimage.php');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'cropimage');
+        $this->loadTranslationsFrom(__DIR__.'/../publishable/lang', 'cropimage');
+        $this->publishes([__DIR__."/assets" => public_path('manuel90/cropimage')], 'public');
 
-        $this->loadTranslationsFrom(realpath(__DIR__.'/../publishable/lang'), 'cropimage');
+        if( class_exists('Voyager') ) {
+            Voyager::addFormField(CropImageFormField::class);
+        }
     }
 
     /**
@@ -31,12 +34,6 @@ class CropImageFieldServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if( class_exists('Voyager') ) {
-            Voyager::addFormField(CropImageFormField::class);
-        }
-
-        $publishablePath = dirname(__DIR__).'/publishable';
-
-        $this->publishes(["{$publishablePath}/assets/" => public_path('assets')]);
+        
     }
 }

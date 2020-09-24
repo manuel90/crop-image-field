@@ -7,9 +7,7 @@
             "email": "testmlzra@gmail.com"
         }
     ],
-    "require": {
-        "tcg/voyager": "^1.1"
-    },
+    "require": {},
     "autoload": {
         "psr-4": {
             "Manuel90\\CropImageField\\": "src/"

@@ -17,9 +17,6 @@ use App\Http\Controllers\Controller;
 
 class CropImageFieldController extends Controller
 {
-    public function hello() {
-        return view('cropimage::hello');
-    }
 
     public function uploadImage(Request $request) {
 
@@ -27,16 +24,16 @@ class CropImageFieldController extends Controller
         $public_path = $request->input('public_path', 'general');
 
         $status = 'error';
-        $message = __('cropimage::error_saving_image');
+        $message = __('cropimage::general.error_saving_image');
         $data = [];
 
         $user = Auth::user();
 
         if( !Auth::check() ) {
-            $message = __('cropimage::denyaccess');
+            $message = __('cropimage::general.denyaccess');
         } else {
             try {
-                
+
                 //$ext = $request->file('image')->extension();
 
                 $path = Storage::putFile(
@@ -44,7 +41,7 @@ class CropImageFieldController extends Controller
                 );
 
                 $status = 'success';
-                $message = __('cropimage::data_saved_successfully');
+                $message = __('cropimage::general.data_saved_successfully');
                 $data = array(
                     'full' => Voyager::image(str_replace('public/','',$path)),
                     'path' => $public_path,
@@ -71,6 +68,7 @@ class CropImageFieldController extends Controller
             'status' => $status,
             'message' => $message,
             'data' => $data,
+            'user' => $user,
         ]);
     }
 

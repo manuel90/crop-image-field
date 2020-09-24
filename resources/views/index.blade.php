@@ -1,4 +1,7 @@
-@if( isset($row->details->image_description) ) 
+<?php
+use Manuel90\CropImageField\FormFields\CropImageFormField;
+?>
+@if( isset($row->details->image_description) )
 <br/>
 <h5><i>{{ $row->details->image_description }}</i></h5>
 @endif
@@ -16,8 +19,8 @@
         echo $accept ? ' accept="'.$accept.'"' : '';
         ?>/>
         <input class="el-input-store" type="hidden" name="{{ $row->field }}" value="{{ $item->{$row->field} ? $item->{$row->field} : '' }}" />
-        <a href="#{{ 'icrop_'.$row->field }}" data-pfolder="{{ $public_path }}" data-imageheight="{{ $imageHeight }}" data-imagewidth="{{ $imageWidth }}" data-ajaxurl="{{ route('crop.image.upload') }}" data-preview="{{ '#preview_name_icrop_'.$row->field }}" class="btn btn-primary input-file-crop-image"><?php echo __('cropimage::choose_image'); ?></a>
-        <a href="#" style="display: none;" data-cropurl="{{ route('crop.image') }}" class="btn btn-success btn-run-crop">@lang('cropimage::cut_image')</a>
+        <a href="#{{ 'icrop_'.$row->field }}" data-pfolder="{{ $public_path }}" data-imageheight="{{ $imageHeight }}" data-imagewidth="{{ $imageWidth }}" data-ajaxurl="{{ route('crop.image.upload') }}" data-preview="{{ '#preview_name_icrop_'.$row->field }}" class="btn btn-primary input-file-crop-image"><?php echo __('cropimage::general.choose_image'); ?></a>
+        <a href="#" style="display: none;" data-cropurl="{{ route('crop.image') }}" class="btn btn-success btn-run-crop">@lang('cropimage::general.cut_image')</a>
         <span id="{{ 'preview_name_icrop_'.$row->field }}" class="preview-name"></span>
     </div>
 </div>
