@@ -6,8 +6,6 @@ use Illuminate\Support\ServiceProvider;
 
 use Manuel90\CropImageField\FormFields\CropImageFormField;
 
-use TCG\Voyager\Facades\Voyager;
-
 class CropImageFieldServiceProvider extends ServiceProvider
 {
     /**
@@ -22,8 +20,8 @@ class CropImageFieldServiceProvider extends ServiceProvider
         $this->loadTranslationsFrom(__DIR__.'/../publishable/lang', 'cropimage');
         $this->publishes([__DIR__."/assets" => public_path('manuel90/cropimage')], 'public');
 
-        if( class_exists('Voyager') ) {
-            Voyager::addFormField(CropImageFormField::class);
+        if( class_exists('\TCG\Voyager\Facades\Voyager') ) {
+            \TCG\Voyager\Facades\Voyager::addFormField(CropImageFormField::class);
         }
     }
 
